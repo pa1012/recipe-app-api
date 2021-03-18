@@ -5,6 +5,7 @@ from core import models
 
 from unittest.mock import patch
 
+
 def sample_user(email='test@abc.com', password='123456'):
     """Create user"""
     return get_user_model().objects.create_user(email, password)
