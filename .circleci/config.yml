@@ -6,12 +6,7 @@ orbs:
 jobs:
   build-and-test:
     executor: python/default
-    docker:
-      - image: circleci/postgres:10-alpine
-        environment: DB_HOST = ${DB_HOST}
-          POSTGRES_DB=${DB_NAME}
-          POSTGRES_USER=${DB_USER}
-          POSTGRES_PASSWORD=${DB_PASS}
+
     steps:
       - checkout
       - python/load-cache
